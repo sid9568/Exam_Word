@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
 	def index
-		end
+    end
+    def shik_lo_bhai
+    end
 		
 end
