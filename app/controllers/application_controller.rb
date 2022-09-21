@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+<<<<<<< HEAD
 	include ApplicationHelper
  
   include ResponseJson
@@ -43,4 +44,11 @@ class ApplicationController < ActionController::Base
 
 end
 
+=======
+	def index
+    end
+    def shik_lo_bhai
+    end
+		
+>>>>>>> b4fb4aff52af9d8346eef1bcd4fc99b03c67e7df
 end
