@@ -6,4 +6,8 @@ class ExamsController < ApplicationController
   def _navbar
   end
 
+  def ishu
+    
+  end 
+
 end
