@@ -1,1 +1,155 @@
-siddharth
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<style>
+	{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: sans-serif;
+	}*/
+
+	body{
+		background: #fff;
+		min-height: 100vh;
+	}
+	header{
+		position: fixed;
+		top: 0;
+		right: 0;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;background: #fff;
+		box-shadow: 0 5px 25px rgb(0, 0, 0, 0.05);
+	}
+	.logo{
+		height: 60px;
+		line-height: 60px;
+		color: #12334e;
+		font-weight: 700;
+		font-size: 2em;
+		text-decoration: none;
+		cursor: pointer;
+		padding-left: 20px;
+		text-decoration: none;
+	}
+	#toggle{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width:60px ;
+		height: 60px;
+		background: #9051ff;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	#toggle::before
+	{
+		content:' ';
+		position: absolute;
+		width: 28px;
+		height: 2px;
+		background: #fff;
+		transform: translateY(-5px);
+		transition: 0.2s;
+	}
+	#toggle::after
+	{
+		content:' ';
+		position: absolute;
+		width: 28px;
+		height: 2px;
+		background: #fff;
+		transform: translateY(5px);
+		transition: 0.2s;
+	}
+	#toggle.active::before
+	{
+		transform: translateY(0px) rotate(45deg);
+	}
+	#toggle.active::after
+	{
+		transform: translateY(0px) rotate(-45deg);
+	}
+	#toggle.active
+	{
+		background: #f7226a;
+	}
+    #navbar{
+    	position: relative;
+    	height: 60px;
+    	line-height: 31px;
+    	right: 60px;
+    	background: #fff;
+    	transition: 0.5s;
+    	width: 0 ;
+    	overflow: hidden;
+    }
+    #navbar.active
+    {
+      width: 660px;
+    }
+    #navbar ul
+    {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+    }
+   #navbar ul li
+   {
+   	list-style: none;
+   }
+   #navbar ul li a
+   {
+     color: #12334e;
+     height: 60px;
+     line-height: 31px;
+     display: inline-block;
+     text-decoration: none;
+     font-size: 1.2em;
+     padding: 0 15px;
+     letter-spacing:2px ;
+     
+   }
+   #navbar ul li a:hover
+   {
+    color: #fff;
+    background: #9051ff;
+    margin-top: 0px ;
+   }
+
+</style>
+<body>
+<header id="header">
+	<a href="#" class="logo">Logo</a>
+	<div id="toggle"></div>
+	<div id="navbar">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Home</a></li>
+		</ul>
+	</div>
+</header>
+
+<script>
+	const toggle  = document.getElementById('toggle');
+	const navbar  = document.getElementById('navbar');
+	toggle.onclick = function(){
+	  toggle.classList.toggle('active');
+      navbar.classList.toggle('active');
+
+	}
+
+</script>
+
+</body>
+</html>
