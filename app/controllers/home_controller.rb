@@ -4,5 +4,8 @@ class HomeController < ApplicationController
 
   def _navbar
   end
+
+  def sing
+  end
   
 end
